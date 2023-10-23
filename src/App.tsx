@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.scss";
+import TopBar from "./components/TopBar/TopBar.component";
 
-function App() {
+const darkBackground = "/assets/wallpapers/3-1.jpg";
+const lightBackground = "/assets/wallpapers/3-2.jpg";
+
+const App = () => {
+  const preloadImage = (path: string) => {
+    const img = new Image();
+    img.src = path;
+  };
+
+  useEffect(() => {
+    preloadImage(darkBackground);
+    preloadImage(lightBackground);
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <TopBar />
+      </main>
+      <div className="background-cover" aria-hidden="true"></div>
+    </>
   );
-}
+};
 
 export default App;
