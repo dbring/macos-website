@@ -1,11 +1,13 @@
-.container {
+.menu-bar-container {
   height: 100%;
 
   display: flex;
   position: relative;
+
+  height: 100%;
 }
 
-.menuParent {
+.menu-bar-parent {
   z-index: 1;
   position: absolute;
   margin-top: 1.5px;
@@ -21,8 +23,6 @@
   z-index: 1;
 
   padding: 0 0.5rem;
-
-  height: 100%;
 
   &.defaultMenu {
     font-weight: 600 !important;
@@ -47,13 +47,11 @@
 
     transition: transform 100ms ease;
 
-    background-color: hsla(var(--app-color-grey-100-hsl), 0.2);
+    background-color: hsla(var(--app-color-grey-100-hsl), 0.3);
   }
 }
 
 .appleIconButton {
   margin: 0 0rem 0 0.5rem;
   padding: 0 0.7rem;
-
-  display: block;
 }
