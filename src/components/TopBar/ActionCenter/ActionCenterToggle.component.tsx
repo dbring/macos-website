@@ -24,7 +24,12 @@ export const ActionCenterToggle = () => {
           <SwitchSVG />
         </TopBarIconButton>
       </span>
-      <div className={clsx("menuParent", state === "hidden" && "hidden")}>
+      <div
+        className={clsx(
+          "action-center-menu-parent",
+          state === "hidden" && "hidden"
+        )}
+      >
         <ActionCenter />
       </div>
     </div>

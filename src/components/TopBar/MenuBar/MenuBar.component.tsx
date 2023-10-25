@@ -30,7 +30,7 @@ export const MenuBar = () => {
   useOutsideClick(parentRef, () => setActiveMenu(""));
 
   return (
-    <div className="container" ref={parentRef}>
+    <div className="menu-bar-container" ref={parentRef}>
       {Object.keys(currentAppMenus).map((menuID) => {
         if (isValidMenuKey(menuID)) {
           return (
@@ -59,7 +59,7 @@ export const MenuBar = () => {
                 </button>
               </span>
               <div
-                className="menuParent"
+                className="menu-bar-parent"
                 style={{
                   visibility: activeMenu !== menuID ? "hidden" : "visible",
                 }}
