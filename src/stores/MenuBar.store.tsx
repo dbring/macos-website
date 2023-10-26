@@ -1,5 +1,5 @@
 import { atom } from "jotai";
-import { finderMenuConfig } from "../data/finder.menu.config";
+import { finderMenuConfig } from "../data/menu/finder.menu.config";
 
 const menuConfigs = { finder: finderMenuConfig };
 
