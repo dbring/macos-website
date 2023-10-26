@@ -1,4 +1,4 @@
-import { MenuType, createMenuConfig } from "../helpers/create-menu-config";
+import { MenuType, createMenuConfig } from "../../helpers/create-menu-config";
 
 export type FinderMenuType = {
   default: MenuType;

@@ -38,7 +38,7 @@ export const DockItem = ({
 
   const { width } = useDockHoverAnimation(mouseX, imgRef);
 
-  function openApp(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  const openApp = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (!shouldOpenWindow) return void externalAction?.(e);
 
     setOpenApps((apps) => {
@@ -46,7 +46,7 @@ export const DockItem = ({
       return apps;
     });
     setActiveApp(appID);
-  }
+  };
 
   return (
     <button

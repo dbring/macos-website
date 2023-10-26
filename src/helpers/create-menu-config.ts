@@ -1,4 +1,4 @@
-import { FinderMenuType } from "../data/finder.menu.config";
+import { FinderMenuType } from "../data/menu/finder.menu.config";
 
 export type SubMenuType = {
   [key: string]: {
