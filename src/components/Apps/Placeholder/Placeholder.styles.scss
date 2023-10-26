@@ -1,0 +1,33 @@
+.placeholder-container {
+  background-color: var(--app-color-light);
+
+  border-radius: inherit;
+}
+
+.placeholder-title-bar {
+  padding: 1rem 1rem;
+
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.placeholder-main-area {
+  font-size: 1.618rem;
+  color: var(--app-color-light-contrast);
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-img {
+  max-width: 8rem;
+  aspect-ratio: 1 / 1;
+}

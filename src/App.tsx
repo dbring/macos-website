@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.scss";
+import { WindowsArea } from "./components/Desktop/Window/WindowsArea.component";
 import { Dock } from "./components/Dock/Dock.component";
 import TopBar from "./components/TopBar/TopBar.component";
 
@@ -20,6 +21,7 @@ const App = () => {
     <>
       <main>
         <TopBar />
+        <WindowsArea />
         <Dock />
       </main>
       <div className="background-cover" aria-hidden="true"></div>

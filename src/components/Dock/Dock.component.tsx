@@ -4,7 +4,7 @@ import { RovingTabIndexProvider } from "react-roving-tabindex";
 import { appsConfig } from "../../data/apps/apps-config";
 import { openAppsStore } from "../../stores/Apps.store";
 import "./Dock.styles.scss";
-import { DockItem } from "./DockItem";
+import { DockItem } from "./DockItem.component";
 
 export const Dock = () => {
   const [openApps] = useAtom(openAppsStore);

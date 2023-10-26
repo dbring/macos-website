@@ -20,14 +20,14 @@ type DockItemProps = AppConfig & {
   index: number;
 };
 
-export function DockItem({
+export const DockItem = ({
   title,
   externalAction,
   mouseX,
   appID,
   isOpen,
   shouldOpenWindow,
-}: DockItemProps) {
+}: DockItemProps) => {
   const [, setOpenApps] = useImmerAtom(openAppsStore);
   const [, setActiveApp] = useAtom(activeAppStore);
   const [animateObj, setAnimateObj] = useState({
@@ -76,7 +76,7 @@ export function DockItem({
       />
     </button>
   );
-}
+};
 
 const baseWidth = 57.6;
 const distanceLimit = baseWidth * 6;
