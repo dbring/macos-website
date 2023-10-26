@@ -56,7 +56,8 @@ export const DockItem = ({
     >
       <p className="tooltip">{title}</p>
       <motion.span
-        onTap={() => setAnimateObj({ translateY: ["0%", "-39.2%", "0%"] })}
+        onTapStart={() => setAnimateObj({ translateY: ["0%", "-39.2%", "0%"] })}
+        onTapCancel={() => setAnimateObj({ translateY: ["0%", "0%", "0%"] })}
         initial={false}
         animate={animateObj}
         transition={{ type: "spring", duration: 0.7 }}
