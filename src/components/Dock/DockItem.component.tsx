@@ -31,7 +31,7 @@ export const DockItem = ({
   const [, setOpenApps] = useImmerAtom(openAppsStore);
   const [, setActiveApp] = useAtom(activeAppStore);
   const [animateObj, setAnimateObj] = useState({
-    translateY: ["0%", "0%", "0%"],
+    translateY: "0%",
   });
 
   const imgRef = useRef<HTMLImageElement | null>(null);
@@ -48,6 +48,13 @@ export const DockItem = ({
     setActiveApp(appID);
   };
 
+  const handleTap = () => {
+    setAnimateObj({ translateY: "-39.2" });
+    setTimeout(() => {
+      setAnimateObj({ translateY: "0%" });
+    }, 500);
+  };
+
   return (
     <button
       className="dockItemButton"
@@ -56,8 +63,7 @@ export const DockItem = ({
     >
       <p className="tooltip">{title}</p>
       <motion.span
-        onTapStart={() => setAnimateObj({ translateY: ["0%", "-39.2%", "0%"] })}
-        onTapCancel={() => setAnimateObj({ translateY: ["0%", "0%", "0%"] })}
+        onTap={handleTap}
         initial={false}
         animate={animateObj}
         transition={{ type: "spring", duration: 0.7 }}
